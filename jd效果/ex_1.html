@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      width: 790px;
+      height: 340px;
+      margin: 100px auto;
+      position: relative;
+    }
+    .current {
+      display: block;
+    }
+    img {
+      width: 790px;
+      height: 340px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      cursor: pointer;
+    }
+    .dire {
+      width: 30px;
+      height: 60px;
+      background-color: black;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      right: 0;
+    }
+    span {
+      display: block;
+      width: 30px;
+      height: 60px;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      font-size: 30px;
+      font-weight: 200;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="current photo" src="images/1.jpg"/>
+    <img class="photo" src="images/2.jpg"/>
+    <img class="photo" src="images/3.jpg"/>
+    <img class="photo" src="images/4.jpg"/>
+    <img class="photo" src="images/5.jpg"/>
+    <img class="photo" src="images/6.jpg"/>
+    <img class="photo" src="images/7.jpg"/>
+    <img class="photo" src="images/8.jpg"/>
+    <div class="dire left" onclick="pre(-1)">
+      <span><</span>
+    </div>
+    <div class=" dire right" onclick="pre(1)">
+      <span>></span>
+    </div>
+  </div>
+</body>
+<script>
+  $('.wrap').mouseover(function() {
+    $('.dire').show()
+  }).mouseout(function() {
+    $('.dire').hide()
+  })
+
+  $('.left').mouseover(function() {
+    $(this).css('background-color', 'rgba(0, 0, 0, 0.4)')
+  }).mouseout(function() {
+    $(this).css('background-color', 'rgba(0, 0, 0, 0.2)')
+  })
+  $('.right').mouseover(function() {
+    $(this).css('background-color', 'rgba(0, 0, 0, 0.4)')
+  }).mouseout(function() {
+    $(this).css('background-color', 'rgba(0, 0, 0, 0.2)')
+  })
+
+  var index = 0
+  var pre = function(offset) {
+    $('.current').fadeOut()
+    $('.current').removeClass('current')
+    index = (index + 8 + offset) % 8
+    var active = $($('.photo')[index])
+    active.addClass('current')
+    active.fadeIn()
+  }
+</script>
+</html>

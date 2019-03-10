@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>评论</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.box {
+		width: 900px;
+		height: 300px;
+		margin: 100px auto auto;
+		border: 1px solid #ccc;
+		padding-left: 40px;
+		box-sizing: border-box;
+	}
+	.score {
+		width: 860px;
+		height: 70px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: flex-start;
+	}
+	h1 {
+		font-size: 18px;
+		line-height: 30px;
+		margin-right: 6px;
+	}
+	img {
+		height: 25px;
+		margin-right: 6px;
+	}
+	a {
+		line-height: 30px;
+		color: red;
+	}
+	.comment {
+		width: 860px;
+		height: 150px;
+		padding-right: 60px;
+		box-sizing: border-box;
+	}
+	textarea {
+		width: 800px;
+		height: 150px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.submit {
+		width: 860px;
+		height: 80px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	input {
+		width: 70px;
+	}
+	p {
+		color: red;
+		font-size: 15px;
+	}
+    </style>
+</head>
+<body>
+	<div class="box">
+		<!--我要评论-->
+		<div class="score">
+			<h1>评论</h1>
+			<img src="images/star.png"/>
+			<a href="#">我要评论</a>
+		</div>
+		<!--评论-->
+		<div class="comment">
+			<textarea>
+			</textarea>
+		</div>
+		<!--提交-->
+		<div class="submit">
+			<input type="image" src="images/btn.png"/>
+			<p>暂时没有评论</p>
+		</div>
+	</div>
+</body>
+</html>

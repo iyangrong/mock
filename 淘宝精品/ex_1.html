@@ -1,0 +1,115 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <style>
+    .wrap {
+      width: 300px;
+      height: 252px;
+      border: 1px solid #ffc0cb;
+      margin: 50px auto auto;
+      display: flex;
+      flex-direction: row;
+    }
+    .left {
+      width: 48px;
+      height: 252px;
+      position: relative;
+    }
+    .middle {
+      width: 204px;
+      height: 252px;
+      border-right: 1px solid #ffc0cb;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    ul {
+      width: 48px;
+      height: 252px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      width: 47px;
+      height: 27px;
+      border-bottom: 1px solid #ffc0cb;
+      border-right: 1px solid #ffc0cb;
+      line-height: 28px;
+      text-align: center;
+      background: url(images/lili.jpg) repeat-x;
+    }
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="left">
+      <ul>
+        <li class="1"><a href="#">女靴</a></li>
+        <li class="2"><a href="#">雪地靴</a></li>
+        <li class="3"><a href="#">冬裙</a></li>
+        <li class="4"><a href="#">呢大衣</a></li>
+        <li class="5"><a href="#">毛衣</a></li>
+        <li class="6"><a href="#">棉服</a></li>
+        <li class="7"><a href="#">女裤</a></li>
+        <li class="8"><a href="#">羽绒服</a></li>
+        <li class="9"><a href="#">牛仔裤</a></li>
+      </ul>
+    </div>
+    <div class="middle">
+      <img src="images/女靴.jpg"/>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="#">女包</a></li>
+        <li><a href="#">男靴</a></li>
+        <li><a href="#">登山鞋</a></li>
+        <li><a href="#">皮带</a></li>
+        <li><a href="#">围巾</a></li>
+        <li><a href="#">皮衣</a></li>
+        <li><a href="#">男毛衣</a></li>
+        <li><a href="#">男棉服</a></li>
+        <li><a href="#">男包</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+$('ul').on('mouseover', 'li', function(e) {
+  var target = e.target;
+  if(target.nodeName == 'LI') {
+  $(this).css('background-image', 'url(./images/abg.gif)').siblings().css('background-image', 'url(images/lili.jpg)')
+  var a = $(this).find('a').text()
+  $('img').attr("src", "images/" + a + ".jpg")
+}
+}).on('mouseout', 'li', function(e) {
+  var target = e.target;
+  if(target.nodeName == 'LI') {
+    $(this).css('background-image', 'url(./images/lili.jpg)')
+    }
+});
+// $('ul').addEventListener('mouseenter', function(event) {
+//   var target = event.target
+//   if(target.nodeName == 'LI') {
+//     console.log("...")
+//     //$(this).css('background-image', 'url(./images/abg.gif)').siblings().css('background-image', 'url(images/lili.jpg)')
+//   }
+// })
+
+/*$('ul').mouseleave(function() {
+  var li = $('this').find('li').css('background-image', 'url(./images/abg.gif)')
+  console.log(li.class)
+})*/
+</script>
+</html>

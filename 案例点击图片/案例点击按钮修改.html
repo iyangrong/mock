@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>修改性别和兴趣</title>
+</head>
+<body>
+	<div id="dv1">
+		<input type="button" value="选择性别" id="btn1"/>
+		<input type="radio" value="1" name="sex"/>男
+		<input type="radio" value="2" name="sex" id="ck"/>女
+		<input type="radio" value="3" name="sex"/>保密
+	</div>
+	<div id="dv2">
+		<input type="button" value="选择兴趣" id="btn2"/>
+		<input type="checkbox" value="1" name="interesting"/>吃饭
+		<input type="checkbox" value="2" name="xingque"/>睡觉
+        <input type="checkbox" value="3" name="xingque" id="ddd"/>打豆豆
+        <input type="checkbox" value="4" name="xingque"/>打篮球
+        <input type="checkbox" value="5" name="xingque"/>打足球
+        <input type="checkbox" value="6" name="xingque"/>打铅球
+	</div>
+	<div id="dv3">
+		<input type="button" value="选择城市" id="btn3"/>
+		<select id="s1">
+			<option value="1">北京</option>
+			<option value="2" id="op1">武汉</option>
+			<option value="2">深圳</option>
+		</select>
+	</div>
+	<script>
+		document.getElementById("btn1").onclick = function() {
+			document.getElementById("ck").checked = true
+		}
+		document.getElementById("btn2").onclick = function() {
+			document.getElementById("ddd").checked = true
+		}
+		document.getElementById("btn3").onclick = function() {
+			document.getElementById("op1").selected = true
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>案例点击图片</title>
+</head>
+<body>
+	<img src="images/1.jpg" alt="美女1"/>
+	<img src="images/2.jpg" alt="美女1"/>
+	<img src="images/3.jpg" alt="美女1"/>
+	<script>
+		var imgObjs = document.getElementsByTagName("img")
+		for(var i = 0; i < imgObjs.length; i++) {
+			imgObjs[i].onclick = function() {
+				alert("我被点了" + this.src)
+			}
+		}
+	</script>
+</body>
+</html>

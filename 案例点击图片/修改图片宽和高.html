@@ -1,0 +1,18 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>修改图片宽和高</title>
+</head>
+<body>
+	<img src="images/1.jpg" width="300" height="400" id="img1"/>
+	<script>
+		var imgObj = document.getElementById("img1")
+		imgObj.onclick = function() {
+			this.width = "500"
+			this.height = "600"
+			this.title = "好大的图片啊"
+		}
+	</script>
+</body>
+</html>

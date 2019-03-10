@@ -1,0 +1,235 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>店铺</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.shop {
+		width: 948px;
+		height: 300px;
+		margin: 100px auto auto;
+	}
+	.header {
+		width: 948px;
+		height: 49px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.nav {
+		width: 768px;
+		height: 49px;
+		line-height: 49px;
+		background-image: url(images/header_r_bg.jpg);
+		display: flex;
+		justify-content: flex-end;
+		color: white;
+		font-size: 13px;
+	}
+	.nav a {
+		margin-right: 8px;
+		margin-left: 8px;
+		text-decoration: none;
+		color: white;
+	}
+	.nav a:hover {
+		text-decoration: underline;
+	}
+	.main {
+		width: 948px;
+		height: 251px;
+		display: flex;
+		justify-content: space-between;
+		border:1px solid #9BB8D2;
+	}
+	.left {
+		width: 341px;
+		height: 251px;
+		padding: 10px;
+		box-sizing: border-box;
+		border-right: 1px solid #9BB8D2;
+		margin-right: 0px;
+	}
+	.left h3, .middle h3 {
+		font-size: 14px;
+		margin-top: 15px;
+		margin-bottom: 10px;
+		letter-spacing: 0.3px;
+	}
+	hr {
+		color: #9BB8D2;
+	}
+	.clearfix {
+		width: 320px;
+		height: 195px;
+		padding: 5px;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.clearfix dl {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	dt {
+		width: 126px;
+		height: 96px;
+		padding: 3px;
+		box-sizing: border-box;
+		border:1px solid #D8D8D8;
+		margin-right: 15px;
+	}
+	dd {
+		font-size: 12px;
+		line-height: 20px;
+		color: black;
+	} 
+	dd a {
+		color: #039;
+		text-decoration: none;
+	} 
+	dd a:hover {
+		color: #900;
+		text-decoration: underline;
+	}
+	.middle {
+		width: 340px;
+		height: 251px;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.middle span {
+		margin-left: 30px;
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.middle span a {
+		margin-right: 5px;
+		font-weight: normal;
+	}
+	.middle span a:hover {
+		color: #900;
+	}
+	.middle h2 {
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 14px;
+	}
+	.middle h2 a {
+		color: #039;
+		text-decoration: none;
+	}
+	.middle h2 a:hover {
+		color: #900;
+		text-decoration: underline;
+	}
+	ul {
+		list-style: none;
+		width: 284.6px;
+		height: 145px;
+		font-size: 12.2px;
+	}
+	li {
+		width: 284.6px;
+		height: 20px;
+		line-height: 20px;
+	}
+	ul a {
+		color: #039;
+		text-decoration: none;
+	}
+	ul a:hover {
+		color: #900;
+		text-decoration: underline;
+	}
+	.right {
+		width: 340px;
+		height: 250px;
+		padding-top: 10px;
+		box-sizing: border-box;
+		background-color: #F60;
+	}
+	.right h3 {
+		font-size: 14px;
+		margin-top: 15px;
+		margin-bottom: 10px;
+		margin-left: 10px;
+		letter-spacing: 0.3px;
+	}
+    </style>
+</head>
+<body>
+	<div class="shop">
+		<!--头部-->
+		<div class="header">
+			<img src="images/logo.jpg"/>
+			<div class="nav">
+				<a href="#">商铺动态</a>|
+				<a href="#">商铺动态</a>|
+				<a href="#">商铺动态</a>
+			</div>
+		</div>
+		<!--主要部分-->
+		<div class="main">
+			<!--左半部分-->
+			<div class="left">
+				<h3>精品商铺</h3>
+				<hr>
+				<div class="clearfix">
+					<dl>
+						<dt><img src="images/img1.jpg"/></dt>
+					    <dd>
+					    	<p>名称：<a href="#">领秀新硅谷</a></p>
+					    	<p>类型：社区商业</p>
+					    	<p>售价：23000-39000元/平米</p>
+					    	<a href="#">详细</a>
+					    </dd>
+					</dl>
+					<dl>
+						<dt><img src="images/img1.jpg"/></dt>
+					    <dd>
+					    	<p>名称：<a href="#">领秀新硅谷</a></p>
+					    	<p>类型：社区商业</p>
+					    	<p>售价：23000-39000元/平米</p>
+					    	<a href="#">详细</a>
+					    </dd>
+					</dl>
+				</div>
+			</div>
+			<!--中部-->
+			<div class="middle">
+				<h3>店铺新闻 
+					<span>
+						<a href="#">商铺动态</a>|
+				        <a href="#">商铺动态</a>|
+				        <a href="#">商铺动态</a>
+				    </span>
+				</h3>
+				<hr>
+				<h2><a href="#">雨润斥资90亿圈3800亩造城 被疑变相圈地</a></h2>
+				<ul>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+					<li><a href="#"> 实录</a> | <a href="#">零售业景气度下滑 盈利增速四年来首现负增长</a></li>
+				</ul>
+			</div>
+			<!--右半部分-->
+			<div class="right">
+				<h3>租售信息</h3>
+				<hr>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
